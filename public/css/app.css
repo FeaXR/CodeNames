@@ -149,8 +149,8 @@ body[data-status="finished"] { border-top-color: var(--muted); }
 
 /* Spymasters: tint the whole page with the color of the team whose turn it is */
 body.role-spymaster { transition: background-color .5s ease; }
-body.role-spymaster[data-turn="red"] { background-color: #6e1d19; }
-body.role-spymaster[data-turn="blue"] { background-color: #143a78; }
+body.role-spymaster[data-turn="red"] { background-color: #3a1f20; }
+body.role-spymaster[data-turn="blue"] { background-color: #1c2840; }
 body.role-spymaster[data-status="finished"] { background-color: var(--bg); }
 body.role-spymaster:not([data-status="finished"]) .status-message span { color: #fff; }
 
