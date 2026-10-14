@@ -1,0 +1,20 @@
+# Example deployment, e.g. as a TrueNAS SCALE "Custom App" (Install via YAML).
+services:
+  codenames:
+    image: ghcr.io/feaxr/codenames:latest
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      # Required. Generate with: echo "base64:$(openssl rand -base64 32)"
+      APP_KEY: "base64:CHANGE_ME"
+      # The address people use to reach the game; used for the share links and QR codes.
+      APP_URL: "http://truenas.local:8080"
+      CODENAMES_DEFAULT_LANGUAGE: "en"
+    volumes:
+      # Holds the SQLite database. On TrueNAS you can swap this for a host path
+      # (e.g. /mnt/tank/apps/codenames:/data) owned by UID/GID 33 (www-data).
+      - codenames-data:/data
+
+volumes:
+  codenames-data:
