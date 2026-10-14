@@ -24,7 +24,11 @@ RUN composer dump-autoload --no-dev --optimize --no-scripts
 ############################################
 FROM serversideup/php:8.4-fpm-nginx
 
-ENV APP_ENV=production \
+# Git commit the image was built from (set by the GitHub workflow).
+ARG APP_VERSION=dev
+
+ENV APP_VERSION=${APP_VERSION} \
+    APP_ENV=production \
     APP_DEBUG=false \
     LOG_CHANNEL=stderr \
     DB_CONNECTION=sqlite \

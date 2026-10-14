@@ -2,6 +2,8 @@
 services:
   codenames:
     image: ghcr.io/feaxr/codenames:latest
+    # Without this, redeploying keeps using the "latest" image already on the server.
+    pull_policy: always
     restart: unless-stopped
     ports:
       - "8080:8080"

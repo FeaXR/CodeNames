@@ -235,6 +235,14 @@ body.role-spymaster:not([data-status="finished"]) .status-message span { color: 
 
 .game.busy .card { pointer-events: none; }
 
+.version {
+    text-align: center;
+    color: var(--muted);
+    opacity: .6;
+    font-size: 0.75rem;
+    padding: 0 16px 16px;
+}
+
 .hint { margin: 0; text-align: center; color: var(--muted); font-size: 0.9rem; }
 
 /* ---------- Spymaster controls ---------- */

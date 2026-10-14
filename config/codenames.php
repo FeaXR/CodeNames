@@ -37,4 +37,16 @@ return [
 
     'poll_interval' => (int) env('CODENAMES_POLL_INTERVAL', 1500),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Build Version
+    |--------------------------------------------------------------------------
+    |
+    | Git commit the Docker image was built from, shown in the page footer so
+    | it is easy to tell which build a server is running.
+    |
+    */
+
+    'version' => substr((string) env('APP_VERSION', 'dev'), 0, 7),
+
 ];

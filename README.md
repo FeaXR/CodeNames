@@ -35,6 +35,8 @@ Every push to `main` builds and publishes `ghcr.io/feaxr/codenames:latest` via G
 2. In TrueNAS SCALE, go to **Apps → Discover Apps → Custom App → Install via YAML** and paste [`compose.yaml`](compose.yaml), filling in `APP_KEY` and `APP_URL` (the address players will use; it is used for the share links and QR codes).
 3. If you use a host path instead of the named volume for `/data`, make it owned by UID/GID `33` (`www-data`).
 
+Every page shows the commit it was built from in its footer (`Build abc1234`), so you can check that the server runs the latest image. `compose.yaml` uses `pull_policy: always`, which makes TrueNAS fetch the newest `latest` image on every redeploy instead of reusing the one it already has.
+
 If the GitHub package is private, either make it public under **Package settings** or add ghcr.io credentials to TrueNAS.
 
 | Variable | Default | Description |

@@ -11,6 +11,8 @@
 <body class="@yield('body-class')">
     @yield('content')
 
+    <footer class="version">Build {{ config('codenames.version') }}</footer>
+
     @stack('scripts')
 </body>
 </html>
