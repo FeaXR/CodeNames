@@ -1,9 +1,9 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "feaxr/codenames",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "A self-hosted Codenames board for playing around a table, with separate spymaster and player views.",
+    "keywords": ["codenames", "board-game", "party-game", "laravel", "self-hosted"],
     "license": "MIT",
     "require": {
         "php": "^8.3",

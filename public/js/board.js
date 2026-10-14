@@ -75,6 +75,9 @@ window.Codenames = (function () {
                 const card = boardEl.children[index];
                 card.querySelector('.word').textContent = data.word;
                 card.dataset.color = data.color || 'hidden';
+                // Only animate cards revealed while watching, not ones already revealed on page load.
+                card.classList.toggle('just-revealed', data.revealed && card.dataset.revealed === 'false');
+                card.dataset.revealed = data.revealed;
                 card.classList.toggle('revealed', data.revealed);
                 card.classList.toggle('armed', armed === index);
                 card.classList.toggle('long', data.word.length > 9);

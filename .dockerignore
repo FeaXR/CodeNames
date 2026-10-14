@@ -16,3 +16,4 @@ compose.yaml
 Dockerfile
 *.md
 bootstrap/cache/*.php
+docs
