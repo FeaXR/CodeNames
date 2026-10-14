@@ -42,7 +42,7 @@ return [
     | Build Version
     |--------------------------------------------------------------------------
     |
-    | Git commit the Docker image was built from, shown in the page footer so
+    | Git commit the Docker image was built from, stored in an app-version meta tag so
     | it is easy to tell which build a server is running.
     |
     */

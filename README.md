@@ -47,7 +47,7 @@ The image runs Nginx + PHP-FPM on port **8080** and keeps its SQLite database in
 3. Fill in `APP_KEY`, and set `APP_URL` to the address people will use to reach the game (it's used for the share links and QR codes).
 4. If you use a host path instead of the named volume for `/data`, make sure it's owned by UID/GID `33` (`www-data`).
 
-`compose.yaml` sets `pull_policy: always`, so a redeploy always fetches the newest `latest` image. Every page shows the commit it was built from in its footer (`Build abc1234`), which makes it easy to check which version a server is running.
+`compose.yaml` sets `pull_policy: always`, so a redeploy always fetches the newest `latest` image. Each page records the commit it was built from in an `app-version` meta tag (view the page source and search for `app-version`), so you can check which version a server is running.
 
 ### Configuration
 
