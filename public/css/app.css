@@ -147,6 +147,12 @@ body[data-turn="red"] { border-top-color: var(--red); }
 body[data-turn="blue"] { border-top-color: var(--blue); }
 body[data-status="finished"] { border-top-color: var(--muted); }
 
+/* Spymasters: tint the whole page with the color of the team whose turn it is */
+body.role-spymaster { transition: background-color .5s ease; }
+body.role-spymaster[data-turn="red"] { background-color: #3a1f20; }
+body.role-spymaster[data-turn="blue"] { background-color: #1c2840; }
+body.role-spymaster[data-status="finished"] { background-color: var(--bg); }
+
 @media (max-width: 640px) {
     .bar { grid-template-columns: 1fr auto; }
     .bar .status { grid-column: 1 / -1; grid-row: 2; justify-content: center; }
