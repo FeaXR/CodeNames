@@ -12,6 +12,10 @@
 <body class="@yield('body-class')">
     @yield('content')
 
+    <footer class="site-footer">
+        Developed by <a href="https://fixr.fyi" target="_blank" rel="noopener">Fixr</a>
+    </footer>
+
     @stack('scripts')
 </body>
 </html>
